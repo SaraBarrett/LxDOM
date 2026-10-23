@@ -3,12 +3,20 @@ console.log(myBanner.src);
 
 //myBanner.src = 'https://img.magnific.com/vetores-gratis/pato-bonito-em-branco_1308-41058.jpg';
 
-const myP = document.getElementsByTagName("p");
-console.log(myP[0]);
+const myP = document.querySelectorAll("p");
 
 function changeLang() {
   //seleccionar
   let myH1 = document.querySelector("h1");
+
+  console.log(myP);
+  Array.from(myP).forEach((element) => {
+    element.backgroundColor = "red";
+  });
+
+  // for (let element of myP) {
+  //   element.style.backgroundColor = "green";
+  // }
 
   if (myH1.innerText == "Galinhas Sedosas") {
     //manipular
@@ -21,27 +29,25 @@ function changeLang() {
   }
 }
 
-let counter = 10;
-let idcount10;
-
-
-function start() {
-  idcount10 = setInterval(function () {
-    counter--;
-    console.log(counter);
-
-    if(counter<1){
-      stop() 
-    }
-
-  
-  }, 1000);
-
-  console.log(idcount10)
+function changeMode() {
+  if (document.body.classList.contains("day")) {
+    document.body.classList.remove("day");
+    document.body.classList.add("night");
+  } else {
+    document.body.classList.remove("night");
+    document.body.classList.add("day");
+  }
 }
 
+function login() {
+  //criar o element
+  let newP = document.createElement("p");
+  newP.innerText = "Olá User";
 
+  //dizer onde se coloca na div
+  let loginDiv = document.querySelector("#login-message");
+  loginDiv.appendChild(newP);
 
-function stop() {
-  clearInterval(idcount10)
+  let loginBtn = document.querySelector("#login");
+  loginBtn.disabled = true;
 }

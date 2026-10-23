@@ -18,7 +18,10 @@ function eggOrChicken() {
   let cimage = document.querySelector("img");
 
   //manipular
-  if (cimage.getAttribute("src") =="https://devsprouthosting.com/images/chicken.jpg") {
+  if (
+    cimage.getAttribute("src") ==
+    "https://devsprouthosting.com/images/chicken.jpg"
+  ) {
     cimage.setAttribute("src", "https://devsprouthosting.com/images/egg.jpg");
   } else {
     cimage.setAttribute(
@@ -28,13 +31,51 @@ function eggOrChicken() {
   }
 }
 
+function changeStyle() {
+  //seleccionar os elementos
+  let myContainer = document.getElementById("container");
+  let magicalImagem = document.querySelector("#container img");
 
-function changeStyle(){
-  let myContainer = document.getElementById('container');
-  let magicalImagem = document.querySelector('img');
+  //manipular os elementos
+  myContainer.style.textAlign = "center";
+  magicalImagem.style.width = "150px";
+  magicalImagem.style.borderRadius = "50%";
+}
 
-  myContainer.style.textAlign='center';
-  magicalImagem.style.width='150px';
-  magicalImagem.style.borderRadius='50%';
+function makeRandom() {
+  const colors = [
+    "red",
+    "orange",
+    "yellow",
+    "green",
+    "blue",
+    "indigo",
+    "violet",
+  ];
 
+  const spans = document.querySelectorAll("span");
+
+  // for(let i = 0; i< spans.length; i++){
+
+  //   spans[i].style.color = colors[i];
+  // }
+
+  colors.forEach((element, index) => {
+    spans[index].style.color = element;
+  });
+}
+
+function changeOrder() {
+  let lis = document.querySelectorAll("li");
+
+  for(let element of lis){
+    if(element.classList.contains('highlight')){
+      element.classList.remove('highlight');
+    }else{
+      element.classList.add('highlight');
+    }
+
+  }
+
+  
 }
