@@ -39,15 +39,4 @@ function changeMode() {
   }
 }
 
-function login() {
-  //criar o element
-  let newP = document.createElement("p");
-  newP.innerText = "Olá User";
 
-  //dizer onde se coloca na div
-  let loginDiv = document.querySelector("#login-message");
-  loginDiv.appendChild(newP);
-
-  let loginBtn = document.querySelector("#login");
-  loginBtn.disabled = true;
-}

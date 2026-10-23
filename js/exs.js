@@ -68,14 +68,22 @@ function makeRandom() {
 function changeOrder() {
   let lis = document.querySelectorAll("li");
 
-  for(let element of lis){
-    if(element.classList.contains('highlight')){
-      element.classList.remove('highlight');
-    }else{
-      element.classList.add('highlight');
+  for (let element of lis) {
+    if (element.classList.contains("highlight")) {
+      element.classList.remove("highlight");
+    } else {
+      element.classList.add("highlight");
     }
-
   }
+}
 
-  
+function createBtns() {
+  let myContainer = document.querySelector("#container");
+
+  for (let i = 1; i < 101; i++) {
+    let myBtn = document.createElement("button");
+    myBtn.innerText = "Botão " + i;
+
+    myContainer.appendChild(myBtn);
+  }
 }
