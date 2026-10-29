@@ -4,8 +4,7 @@ let myHeading = document.getElementById("mainheading");
 let doneTodos = document.querySelectorAll(".done");
 let checkbox = document.querySelector("input[name='scales']");
 
-console.log(doneTodos);
-console.log(checkbox);
+
 
 function changeTaste() {
   let mySpan = document.querySelector("span");

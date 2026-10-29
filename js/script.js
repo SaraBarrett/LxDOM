@@ -1,5 +1,5 @@
 const myBanner = document.getElementById("banner");
-console.log(myBanner.src);
+//console.log(myBanner.src);
 
 //myBanner.src = 'https://img.magnific.com/vetores-gratis/pato-bonito-em-branco_1308-41058.jpg';
 
